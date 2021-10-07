@@ -1,7 +1,7 @@
 class User:
     def __init__(self):
         self.guess = True
-        self.play_again = False
+        self.play_again = True
 
     def get_input(self):
         
