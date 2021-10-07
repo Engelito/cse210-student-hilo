@@ -13,21 +13,37 @@ class Dealer:
         self.higher = False
 
     def start_game(self):
-        while self.user01.play_again:
+        
+        while self.user01.play_again and self.c_point > 0:
+            print('Welcome to HighLo!')
+            self.show_score()
             self.get_card()
             self.get_point()
             self.show_score()
-            yesOrNo = input('Keep playing? [y/n]: ').lower()
-            if yesOrNo == 'y':
-                self.user01.play_again = True
-            else:
-                self.user01.play_again = False
+
+            # Validate the input
+            while True:
+                yesOrNo = input('Keep playing? [y/n]: ').lower()
+                if yesOrNo == 'y':
+                    self.user01.play_again = True
+                    print('Next game it is!')
+                    break
+                elif yesOrNo == 'n':
+                    self.user01.play_again = False
+                    break
+                else:
+                    print('Invalid input, try again!')
+            print('')
+        print('Oops, the game is over')     
         pass
 
     def get_card(self):
+
+        # show the first card
         self.p_card = self.c_card
         print(f'The card is: {self.p_card}')
         
+        # Get the input from the user
         self.user01.get_input()
         self.c_card = random.choice(self.c_cards)
         print(f'The Next card: {self.c_card}')
