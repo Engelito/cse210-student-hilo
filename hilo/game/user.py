@@ -1,8 +1,11 @@
+# The player
 class User:
     def __init__(self):
         self.guess = True
         self.play_again = True
 
+
+# Provide an input for the dealer
     def get_input(self):
         
         while True:

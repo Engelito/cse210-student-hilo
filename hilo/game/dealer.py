@@ -1,7 +1,7 @@
 from game.user import User
 import random
 
-
+# The game controller
 class Dealer:
     def __init__(self):
         self.c_cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -12,6 +12,7 @@ class Dealer:
         # True is higher and False is lower
         self.higher = False
 
+# The whole game flow which will be called by the main file
     def start_game(self):
         
         while self.user01.play_again and self.c_point > 0:
@@ -37,6 +38,7 @@ class Dealer:
         print('Oops, the game is over')     
         pass
 
+# Getting cards for the game, initial one and the one next to it
     def get_card(self):
 
         # show the first card
@@ -52,7 +54,8 @@ class Dealer:
         else:
             self.higher = False
 
-    
+
+# Calculate the points of the users by the answers they gave
     def get_point(self):
 
         if self.higher == self.user01.guess:
@@ -60,7 +63,7 @@ class Dealer:
         else:
             self.c_point -= 75
     
-
+# Show the accumulative points
     def show_score(self):
         print(f'Your score is: {self.c_point}')
         pass

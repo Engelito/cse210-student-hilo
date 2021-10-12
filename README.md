@@ -36,3 +36,7 @@ root                    (project root folder)
 ## Authors
 ---
 * TODO: Add your names and emails here
+Jackson Chan: jackson858216047@gmail.com
+Angel Gonzalez: anggon3.ag@gmail.com
+martin Nkala: male.c201090@gmail.com
+Jose Ayuso: ayuso.jd@gmail.com
